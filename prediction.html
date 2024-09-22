@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Gallery</title>
+    <link rel="stylesheet" href="cssfile.css">
+
+
+</head>
+<body>
+
+    <h1>Vegetable Gallery</h1>
+
+    <div class="gallery">
+        <div class="card" onclick="showDetails('tomato')">
+            <img src="image/tomato.jpg" alt="Tomato">
+            <h3>Tomato</h3>
+            
+
+        </div>
+        <div class="card" onclick="showDetails('carrot')">
+            <img src="image/carrot.jpg" alt="Carrot">
+            <h3>Carrot</h3>
+            
+        </div>
+        <div class="card" onclick="showDetails('banana')">
+            <img src="image/banana.jpg" alt="Banana">
+            <h3>Banana</h3>
+           
+        </div>
+        <div class="card" onclick="showDetails('small onion')">
+            <img src="image/smallOnion.jpg" alt="Small onion">
+            <h3>Small onion</h3>
+            
+        </div>
+        <div class="card" onclick="showDetails('beetroot')">
+            <img src="image/beetroot.jpg" alt="Beetroot">
+            <h3>Beetroot</h3>
+            
+        </div>
+        <div class="card" onclick="showDetails('potato')">
+            <img src="image/potato.jpg" alt="Potato">
+            <h3>Potato</h3>
+           
+        </div>
+        <div class="card" onclick="showDetails('big onion')">
+            <img src="image/onion.jpg" alt="Big onion">
+            <h3>Big onion</h3>
+           
+        </div>
+        <div class="card" onclick="showDetails('green chilli')">
+            <img src="image/chilli.jpg" alt="Green chilli">
+            <h3>Green chilli</h3>
+           
+        </div>
+
+    </div>
+
+    <!-- Modal for displaying vegetable details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="details"></div>
+        </div>
+    </div>
+
+    <script src="jsfile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Veggie Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Register at Veggie Market</h2>
+
+        <!-- Buyer Registration -->
+        <div id="buyer-section" class="register-form">
+            <h3>Buyer Registration</h3>
+            <form action="buyer-home.html" method="GET">
+                <label for="buyer-name">Full Name:</label>
+                <input type="text" id="buyer-name" name="name" required>
+
+                <label for="buyer-email">Email:</label>
+                <input type="email" id="buyer-email" name="email" required>
+
+                <label for="buyer-password">Password:</label>
+                <input type="password" id="buyer-password" name="password" required>
+
+                <button type="submit">Register as Buyer</button>
+            </form>
+        </div>
+
+        <!-- Seller Registration -->
+        <div id="seller-section" class="register-form">
+            <h3>Seller Registration</h3>
+            <form action="seller-home.html" method="GET">
+                <label for="seller-name">Full Name:</label>
+                <input type="text" id="seller-name" name="name" required>
+
+                <label for="seller-email">Email:</label>
+                <input type="email" id="seller-email" name="email" required>
+
+                <label for="seller-password">Password:</label>
+                <input type="password" id="seller-password" name="password" required>
+
+                <button type="submit">Register as Seller</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

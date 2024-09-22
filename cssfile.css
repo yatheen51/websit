@@ -1,0 +1,91 @@
+/* Reset some default styles */
+body, h1, h3, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main gallery styling */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Image gallery in modal */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery img {
+    max-width: 100px;
+    border-radius: 5px;
+}

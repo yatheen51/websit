@@ -1,0 +1,130 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: url(bg\ for\ login.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    
+}
+.body.login-container.h2{
+    color: #fff;
+}
+
+header {
+    background-color: #594caf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.login-container,.user-btn{
+    
+    border-radius: 40px;
+}
+.login-container,.h2{
+    color: #fff;
+}
+
+/* Login and Register Form Styles */
+.login-container, .register-container {
+    width: 400px;
+    margin: 50px auto;
+    background-color:transparent;
+    border: 2px solid rgba(2555,255,255,.2);
+    backdrop-filter:blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#buyer-login {
+    font-size: 2000;
+}
+#buyer-password{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,.2);
+    border-radius: 40px;
+}
+#buyer-password input{
+    padding: 20px 45px 20px 20px;
+
+}
+#buyer-login .btn{
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+#buyer-password::placeholder{
+    color: #fff;
+    font-size: medium;
+    text-align: center;
+
+}
+#buyer-email{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,.2);
+    border-radius: 40px;
+}
+#buyer-email::placeholder{
+    color: #fff;
+    font-size: medium;
+    text-align: center;
+
+}
+/*seller*/
+#seller-login {
+    font-size: 2000;
+}
+#seller-password{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,.2);
+    border-radius: 40px;
+}
+#seller-password input{
+    padding: 20px 45px 20px 20px;
+
+}
+#seller-login .btn{
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+}
+
+#seller-password::placeholder{
+    color: #fff;
+    font-size: medium;
+    text-align: center;
+
+}
+#seller-email{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255,.2);
+    border-radius: 40px;
+}
+#seller-email::placeholder{
+    color: #fff;
+    font-size: medium;
+    text-align: center;
+
+}
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Veggie Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 >Login to Veggie Market</h2>
+
+        <!-- Buttons to switch between Buyer and Seller login -->
+        <div class="user-type">
+            <button class="user-btn" onclick="showBuyerLogin()">Buyer Login</button>
+            <button class="user-btn" onclick="showSellerLogin()">Seller Login</button>
+        </div>
+
+        <!-- Buyer Login Form -->
+        <div id="buyer-login" class="login-form">
+            <h3>Buyer Login</h3>
+            <form action="buyer-home.html" method="GET">
+                
+                <input type="email" id="buyer-email" placeholder="email" required><br><br>
+
+                <input type="password" id="buyer-password" placeholder="password" required><br><br>
+
+                <button type="submit" class="btn">Login as Buyer</button>
+            </form>
+            <p >New here? <a href="register.html#buyer-section">Register as Buyer</a></p>
+        </div>
+
+        <!-- Seller Login Form -->
+        <div id="seller-login" class="login-form" style="display:none;">
+            <h3>Seller Login</h3>
+            <form action="seller-home.html" method="GET">
+                
+                <input type="email" id="seller-email" placeholder="email" required><br><br>
+
+            
+                <input type="password" id="seller-password" placeholder="password" required><br><br>
+
+                <button type="submit" class="btn">Login as Seller</button>
+            </form>
+            <p>New here? <a href="register.html#seller-section">Register as Seller</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

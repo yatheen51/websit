@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Home - Veggie Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- <header>
+        <h1>Hello, Seller!</h1>
+        <nav>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header> -->
+
+    <section>
+        <!-- <h2>Your Account Details</h2>
+        <p>Email: <span id="email"></span></p> -->
+
+             <!-- Header Section -->
+       <header>
+        <h1>Welcome to Krishi Bazaar</h1>
+        <h2>Empowering Villages, One Click at a Time</h2>
+        <nav>
+            <!-- <ul> -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#visualizationAndPredictions">Visualization and Predictions</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <br> <a href="index.html">Logout</a>
+            <!-- </ul> -->
+        </nav>
+    </header>
+ 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Fresh Produce Delivered to Your Doorstep</h2>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="container">
+                <h1>Seller Home</h1>
+                <h2>Add Product</h2>
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name:</label>
+                        <input type="text" class="form-control" id="product-name" name="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Product Description:</label>
+                        <textarea class="form-control" id="product-description" name="product-description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price">Product Price:</label>
+                        <input type="number" class="form-control" id="product-price" name="product-price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-quantity">Product Quantity:</label>
+                        <input type="number" class="form-control" id="product-quantity" name="product-quantity" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="addProduct()">Add Product</button>
+                </form>
+                <h2>My Products</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Description</th>
+                            <th>Product Price</th>
+                            <th>Product Quantity</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-list">
+                        <!-- products will be listed here -->
+                    </tbody>
+                </table>
+            </div>
+        
+            <script>
+                let products = [];
+        
+                function addProduct() {
+                    const productName = document.getElementById('product-name').value;
+                    const productDescription = document.getElementById('product-description').value;
+                    const productPrice = document.getElementById('product-price').value;
+                    const productQuantity = document.getElementById('product-quantity').value;
+        
+                    const product = {
+                        name: productName,
+                        description: productDescription,
+                        price: productPrice,
+                        quantity: productQuantity
+                    };
+        
+                    products.push(product);
+        
+                    displayProducts();
+                }
+        
+                function displayProducts() {
+                    const productList = document.getElementById('product-list');
+                    productList.innerHTML = '';
+        
+                    products.forEach((product, index) => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${product.name}</td> 
+                            <td> ${product.description};</td> 
+                            <td>${product.price}</td> 
+                            <td>${product.quantity}</td> 
+                            <td>
+                                <button class="btn btn-danger" onclick="deleteProduct(${index})">Delete</button>
+                            </td>
+                        `;
+                        productList.appendChild(row);
+                    });
+                }
+        
+                function deleteProduct(index) {
+                    products.splice(index, 1);
+                    displayProducts();
+                }
+            </script>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <!-- <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section> -->
+
+    <!-- Predictions Section -->
+    <section id="visualizationAndPredictions" class="hero">
+        <h2>Our Predictions</h2>
+        <h3>Raw banana</h3>
+        <img src="rawbananadata.jpeg" alt="Raw banana data visualization"> <br>
+        <h3>Small onion</h3>
+        <img src="smalloniondata.jpeg" alt="Small onion data visualization"> <br>
+        <h3>Beetroot</h3>
+        <img src="beetrootdata.jpeg" alt="Beetroot data visualization"> <br>
+        <h3>Tomato</h3>
+        <img src="tomatodata.jpeg" alt="Tomato data visualization"> <br>
+        <h3>Potato</h3>
+        <img src="potatodata.jpeg" alt="Potato data visualization"> <br>
+        <h3>Big onion</h3>
+        <img src="bigoniondata.jpeg" alt="Big onion data visualization"> <br>
+        <h3>Carrot</h3>
+        <img src="carrotdata.jpeg alt="Carrot data visualization"> <br>
+        <h3>Green chilli</h3>
+        <img src="greenchillidata.jpeg" alt="Green chilli data visualization"> <br>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Krishi Bazaar, we believe in the power of communities and the potential of every village. Our mission is to connect rural producers directly with the digital marketplace, bridging the gap between local harvests and buyers. </p>
+        <p>Our platform is designed to make the process simple, reliable, and accessible for all. Whether it is a family selling fresh produce, handmade crafts, or other goods, we provide a seamless solution that allows villagers to showcase their products to a wider audience. <br>We believe in sustainability, fair trade, and fostering economic independence for rural communities. By integrating technology with traditional skills and resources, Krishi Bazaar enables villages to thrive in the digital age.</p>
+        <p>Join us as we empower villages, support local economies, and create a bridge from rural communities to the global marketplace.</p>
+    </section>
+
+ <!-- Contact Section -->
+ <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset </button>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2024 Fresh Produce Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <h3>Predictions</h3>
+            <br> <a href="prediction.html">Go to predictions</a>
+</body>
+</html>
